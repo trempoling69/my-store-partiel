@@ -11,7 +11,7 @@
                 <button class="button is-light is-info" @click.prevent="handleboutonadd">+</button>
             </p>
         </div>
-        <button class="button is-light is-success">Ajouter au panier</button>
+        <button class="button is-light is-success" @click.prevent="handleaddtocart(idProduit, quantite)">Ajouter au panier</button>
     </div>
 </template>
 <script>
@@ -21,6 +21,12 @@ data(){
         quantite : 0
     }
 }, 
+props:{
+    idProduit : {
+        type: [Number, String],
+        default : 0
+    }
+},
 methods:{
     handlebouton1(){
         if(this.quantite > 0){
@@ -31,6 +37,9 @@ methods:{
     }, 
     handleboutonadd(){
         this.quantite = this.quantite + 1
+    }, 
+    handleaddtocart(idProduit, quantite){
+        this.$store.commit("ADD_TO_CART", {idProduit, quantite})
     }
 }
 }

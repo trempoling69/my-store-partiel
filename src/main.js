@@ -23,5 +23,6 @@ new Vue({
     fetchProducts()
       .then(products => store.commit("SET_PRODUCTS", products))
       .catch(err => console.log(err));
+    store.commit("GET_CART")
   },
 }).$mount("#app");

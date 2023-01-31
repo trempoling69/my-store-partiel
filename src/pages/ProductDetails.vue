@@ -24,7 +24,7 @@
                 <p class="subtitle is-5 is-spaced">{{ product.stock }}</p>
                 <br>
                 <p class="title is-3">Ajouter le au panier !</p>
-                <AddToCart/>
+                <AddToCart :idProduit="this.productId"/>
             </div>
         </div>
         
