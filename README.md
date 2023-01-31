@@ -1,24 +1,33 @@
 # my-store-partiel
 
-## Project setup
+## Projet V1
+
+### Home page
 ```
-npm install
+- Filtre textuel nom et description
+- Filtre prix 
+- Card pour chaque produit
+- Pagination
 ```
 
-### Compiles and hot-reloads for development
+### Product page
 ```
-npm run serve
-```
+- Carousel pour images 
+- Details produit
+``` 
 
-### Compiles and minifies for production
+### Cart page 
 ```
-npm run build
+- Existe 
+- Static pas de produit
+``` 
+### Component ajout quantite et panier
 ```
+- Changement de quantité (+ et -)
+- Bouton ajout panier
+``` 
 
-### Lints and fixes files
+### Router
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 3 routes
+``` 
