@@ -7,15 +7,6 @@ import CartPage from "../pages/CartPage"
 
 Vue.use(Router);
 
-// const fetchProductById = async function (id) {
-//     const response = await axios.get(`https://dummyjson.com/products/${id}`);
-//     return response.data;
-// };
-// const getProductById = async (route) => {
-//     const product = await fetchProductById(route.params.productId);
-//     return {product};
-// };
-
 const router = new Router({
   mode: "history",
   base: "/",

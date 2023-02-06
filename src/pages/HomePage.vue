@@ -6,12 +6,17 @@
   <section class="section is-max-desktop has-background-primary-light">
     <div class="columns">
       <div class="column has-text-centered">Rechercher : <input type="text" v-model="filterText" /></div>
+      <div class="column has-text-centered">Prix min : <input type="number" v-model="minPrice" /></div>
       <div class="column has-text-centered">Prix max : <input type="number" v-model="maxPrice" /></div>
     </div>
   </section>
   <section class="section">
     <div class="container">
       <h3 class="title has-text-centered is-size-4">Tous les produits</h3>
+      <div class="box has-text-centered has-background-link-light " v-if="this.allProducts.length == 0">
+        <p class="title is-1 has-text-link-dark">C'est bien vide par ici</p>
+        <p class="subtitle is-3 has-text-info-dark">Change les filtres pour trouver ton bonheur</p>
+      </div>
       <div class="columns is-multiline mt-5 is-8 is-variable is-centered">
         <div v-for="product in currentPage" v-bind:key="product.id" class="column is-4-tablet is-4-desktop">
           <RouterLink :to="{
@@ -68,11 +73,12 @@ export default {
       pageIndex : 0,
       filterText: "",
       maxPrice : 9999,
+      minPrice : 0,
     }
   },
   computed: {
     allProducts: function() {
-      return this.$store.getters.filteredProducts(this.filterText, this.maxPrice)
+      return this.$store.getters.filteredProducts(this.filterText, this.maxPrice, this.minPrice)
     },
     itemsOffset: function(){
       return this.pageIndex * this.itemsByPage;

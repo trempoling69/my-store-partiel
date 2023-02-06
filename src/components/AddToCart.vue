@@ -40,6 +40,8 @@ methods:{
     }, 
     handleaddtocart(idProduit, quantite){
         this.$store.commit("ADD_TO_CART", {idProduit, quantite})
+        this.quantite = 0;
+        alert("Produit ajouté au panier")
     }
 }
 }

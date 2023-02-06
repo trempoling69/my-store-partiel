@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="content">
-                <addToCart :idProduit="this.product.idProduit"></addToCart>  
+                <addToCart :idProduit="this.product.id"></addToCart>  
             </div>
         </div>
     </div>

@@ -1,9 +1,3 @@
-
-import { RouterLink } from 'vue-router';
-
-
-import { RouterLink } from 'vue-router';
-
 <template>
     <nav class="navbar is-transparent">
   <div class="navbar-brand">

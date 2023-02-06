@@ -14,8 +14,8 @@
             <p>QUANTITE :</p>
             <p>{{ quantite }}</p>
             <div class="in-line">
-                <button class="button">+</button>
-                <button class="button">-</button>
+                <button class="button" @click="$emit('increaseQuantite')">+</button>
+                <button class="button" @click="$emit('decreaseQuantite')">-</button>
             </div>
         </div>
         <div class="column">
@@ -43,9 +43,6 @@ export default{
         }
     }, 
     methods:{
-        handleSuppression(itemtodelete){
-            this.$store.commit("SUPP_FROM_CART", itemtodelete)
-        }
     }
 }
 </script>
